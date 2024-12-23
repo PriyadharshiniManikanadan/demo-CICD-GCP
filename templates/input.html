@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKD Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align:center">Chronic Kidney Disease Prediction</h2>
+    <form action="/predict" method="post">
+        <label for="Albumin">Albumin:</label>
+        <input type="number" id="Albumin" name="albumin" required>
+
+        <label for="blood_glucose_random">Blood_glucose_random:</label>
+        <input type="number" id="blood_glucose_random" name="blood_glucose_random" required>
+
+        <label for="blood_urea">Blood_urea:</label>
+        <input type="number" id="blood_urea" name="blood_urea" required>
+
+        <label for="serum_creatine">Serum_creatine:</label>
+        <input type="number" id="serum_creatine" name="serum_creatine" required>
+
+        <label for="hormone_level">Hormone_level:</label>
+        <input type="number" id="hormone_level" name="hormone_level" required>
+		
+		<label for="packed_cell_volume">Packed_cell_volume:</label>
+        <input type="number" id="packed_cell_volume" name="packed_cell_volume" required>
+		
+		<label for="white_blood_count">White_blood_count:</label>
+        <input type="number" id="white_blood_count" name="white_blood_count" required>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
